@@ -6,7 +6,7 @@ function index(req, res) {
   .then(recipes => {
     res.render('recipes/index', {
       recipes,
-      title: "Recipe"
+      title: "All Recipe"
     })
   })
   .catch(err => {
@@ -43,8 +43,21 @@ function show(req, res) {
   })
 }
 
+function create(req, res) {
+  req.body.owner = req.user.profile._id
+  Recipe.create(req.body)
+  .then(recipe => {
+    res.redirect('/recipes')
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/recipes')
+  })
+}
+
 export {
   index,
   create,
   show,
+  create,
 }
