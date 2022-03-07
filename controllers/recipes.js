@@ -15,18 +15,6 @@ function index(req, res) {
   })
 }
 
-function create(req, res) {
-  req.body.owner = req.user.profile._id
-  Recipe.create(req.body)
-  .then(queen => {
-    res.redirect('/recipes')
-  })
-  .catch(err => {
-    console.log(err)
-    res.redirect('/recipes')
-  })
-}
-
 function show(req, res) {
   Recipe.findById(req.params.id)
   .populate("owner")
@@ -55,9 +43,19 @@ function create(req, res) {
   })
 }
 
+function newRecipe (req, res) {
+  res.render('recipes/new', {
+    title: "Add Recipe",
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect("/recipes")
+  })
+}
+
 export {
   index,
   create,
   show,
-  create,
+  newRecipe as new,
 }
