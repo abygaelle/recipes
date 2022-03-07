@@ -1,5 +1,5 @@
 import { Router } from 'express'
-import { index } from '../controllers/queens.js'
+import { index } from '../controllers/recipes.js'
 import { isLoggedIn } from '../middleware/middleware.js'
 import * as profilesCtrl from '../controllers/profiles.js'
 
