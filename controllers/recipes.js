@@ -22,7 +22,7 @@ function show(req, res) {
     console.log(taco)
     res.render('recipe/show', {
       recipe,
-      title: "Show"
+      title: "Recipe Details"
     })
   })
   .catch(err => {
@@ -52,10 +52,19 @@ function newRecipe (req, res) {
     res.redirect("/recipes")
   })
 }
+function createReview(req, res) {
+  Food.findById(req.params.id, function(err, food) {
+    food.reviews.push(req.body)
+    food.save(function(err) {
+      res.redirect(`/foods/${food._id}`)
+    })
+  })
+}
 
 export {
   index,
   create,
   show,
   newRecipe as new,
+  createReview,
 }
