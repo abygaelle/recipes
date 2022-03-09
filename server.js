@@ -57,6 +57,9 @@ app.use(
 app.use(passport.initialize())
 app.use(passport.session())
 
+//custom middleware
+app.use(passUserToView)
+
 // router middleware
 app.use('/', indexRouter)
 app.use('/auth', authRouter)
