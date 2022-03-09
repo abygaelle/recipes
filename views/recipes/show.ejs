@@ -1,0 +1,40 @@
+<%- include('../partials/html-head') %>
+<link rel="stylesheet" href="/stylesheets/show.css" />
+<%- include('../partials/nav') %>
+
+<main>
+  <h1><%= Recipes %></h1>
+  <section>
+    <div>Name: </div>
+    <div><%= recipe.name %></div>
+    <div>directions: </div>
+    <div><%= recipe.directions %></div>
+    <div>ingredients: </div>
+    <div><%= recipe.ingredients %></div>
+    <div>totalTime: </div>
+    <div><%= recipe.totalTime%></div>
+    <div>Reviews:</div>
+    <ul>
+      <% recipes.revies.forEach(recipe=> { %>
+        <li><%= recipe.name %></li>
+      <% }) %>
+    </ul>
+    
+  </section>
+
+  <form 
+    id="add-to-recipe" 
+    action="/recipes/<%= recipe._id %>/recipes" 
+    method="POST"
+  >
+    <select name="recipeId">
+      <% recipe.forEach(recipe=> { %>
+        <option value="<%= recipe._id %>"><%= recipe.name %></option>
+        <% }) %>
+    </select>
+    <button type="submit">Add to Recipes</button>
+  </form>
+  </section>
+</main>
+  
+<%- include('../partials/footer') %>
