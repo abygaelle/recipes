@@ -4,7 +4,7 @@ const Schema = mongoose.Schema
 
 const reviewSchema = new Schema({
   content: String,
-  rating: {type: Number, min: 1, max: 10}
+  rating: {type: Number, min: 1, max: 5, default: 5}
 }, {
   timestamps: true
 })
@@ -23,10 +23,6 @@ const recipeSchema = new Schema ({
     required: true,
   },
   delicious: {
-    type: Boolean,
-    required: true,
-  },
-  desert: {
     type: Boolean,
     required: true,
   },

@@ -6,12 +6,15 @@ const router = Router()
 
 // GET localhost:3000/recipes
 router.get('/', recipesCtrl.index)
-router.get('/:id', recipesCtrl.show)
+
+router.get('/new', isLoggedIn, recipesCtrl.new)
+
+router.get('/:id', isLoggedIn, recipesCtrl.show)
+
 
 // POST localhost:3000/recipes
 router.post("/", isLoggedIn, recipesCtrl.create)
-router.get('/new', isLoggedIn, recipesCtrl.new)
-router.get('/:id', isLoggedIn, recipesCtrl.show)
+
 router.post("/:id/reviews", isLoggedIn, recipesCtrl.createReview)
 
 

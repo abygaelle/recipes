@@ -19,7 +19,6 @@ function show(req, res) {
   Recipe.findById(req.params.id)
   .populate("owner")
   .then(recipe => {
-    console.log(taco)
     res.render('recipe/show', {
       recipe,
       title: "Recipe Details"
