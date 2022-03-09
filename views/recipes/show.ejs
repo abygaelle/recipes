@@ -5,6 +5,7 @@
 <main>
   <h1><%= Recipes %></h1>
   <section>
+    <% if (user) { %>
     <div>Name: </div>
     <div><%= recipe.name %></div>
     <div>directions: </div>
@@ -36,5 +37,5 @@
   </form>
   </section>
 </main>
-  
+<% } %>
 <%- include('../partials/footer') %>

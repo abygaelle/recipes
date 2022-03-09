@@ -34,9 +34,9 @@ const recipeSchema = new Schema ({
     type: Number,
     min: 0,
   },
-  
+
   owner: {type: Schema.Types.ObjectId, ref: "Profile"},
-  revies: [reviewSchema],
+  reviews: [reviewSchema],
 
 }, {
   timestamps: true,

@@ -2,6 +2,17 @@
 <%- include('../partials/nav') %>
 
 <section>
+  <h1>Recipes!</h1>
+  <% if (user) { %>
+    <h2>Add a Recipe!</h2>
+    <form action="/recipes" method="POST">
+      <label>
+        Name:
+        <input type="text" name="name" autocomplete="off">
+      </label>
+      <button type="submit">Add 🌮</button>
+    </form>
+  <% } %>
   <h2>All Recipes</h2>
   <ul>
     <% recipes.forEach(recipe => { %>
