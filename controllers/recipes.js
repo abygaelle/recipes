@@ -25,10 +25,10 @@ function show(req, res) {
       title: "Recipe Details"
     })
   })
-  // .catch(err => {
-  //   console.log(err)
-  //   res.redirect("/recipes")
-  // })
+  .catch(err => {
+    console.log(err)
+    res.redirect("/recipes")
+  })
 }
 
 function create(req, res) {
@@ -49,10 +49,10 @@ function newRecipe (req, res) {
   })
 }
 function createReview(req, res) {
-  Food.findById(req.params.id, function(err, food) {
-    food.reviews.push(req.body)
-    food.save(function(err) {
-      res.redirect(`/foods/${food._id}`)
+  Recipe.findById(req.params.id, function(err, recipe) {
+    recipe.reviews.push(req.body)
+    recipe.save(function(err) {
+      res.redirect(`/recipes/${recipe._id}`)
     })
   })
 }

@@ -3,7 +3,7 @@
 
 <section>
   <h1>Edit Your Recipe</h1>
-  <form action="/recipes/<%= recipe_id %>?_method=PUT" method="POST">
+  <form action="/recipes/<%= recipe._id %>?_method=PUT" method="POST">
     <label>
       Name: 
       <input type="text" name="name" value="<%= recipe.name %>" autocomplete="off">
@@ -24,7 +24,7 @@
       <input type="text" name="ingredients" value="<%= recipe.directions %>">
     </label>
     <br>
-    <button type="submit">Update Recipe</button>
+    <button type="submit">Edit Recipe</button>
   </form>
 </section>
 
