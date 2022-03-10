@@ -46,10 +46,6 @@ function newRecipe (req, res) {
   res.render('recipes/new', {
     title: "Add Recipe",
   })
-  .catch(err => {
-    console.log(err)
-    res.redirect("/recipes")
-  })
 }
 function createReview(req, res) {
   Food.findById(req.params.id, function(err, food) {
