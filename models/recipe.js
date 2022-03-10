@@ -14,10 +14,6 @@ const recipeSchema = new Schema ({
     type: String,
     required: true,
   },
-  delicious: {
-    type: Boolean,
-    required: true,
-  },
   totalTime: {
     type: Number,
     min: 0,

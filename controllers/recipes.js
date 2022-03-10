@@ -20,7 +20,7 @@ function show(req, res) {
   Recipe.findById(req.params.id)
   .populate("owner")
   .then(recipe => {
-    res.render('recipe/show', {
+    res.render('recipes/show', {
       recipe,
       title: "Recipe Details"
     })
