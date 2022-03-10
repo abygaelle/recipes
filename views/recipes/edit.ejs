@@ -1,0 +1,36 @@
+<%- include('../partials/html-head') %>
+<%- include('../partials/nav') %>
+
+<section>
+  <h1>Edit Your Recipe</h1>
+  <form action="/recipes/<%= recipe_id %>?_method=PUT" method="POST">
+    <label>
+      Name: 
+      <input type="text" name="name" value="<%= recipe.name %>" autocomplete="off">
+    </label>
+    <br>
+    <label>
+      Total Time:
+      <input type="number" name="totalTime" value="<%= recipe.totalTime %>" min="1" max="1000">
+    </label>
+    <br>
+    <label>
+      Delicious:
+      <input type="text" name="delicious" value="<%= recipe.delicious %>">
+    </label>
+    <br>
+    <label>
+      Ingredients:
+      <input type="text" name="ingredients" value="<%= recipe.ingredients %>">
+    </label>
+    <br>
+    <label>
+      Directions:
+      <input type="text" name="ingredients" value="<%= recipe.directions %>">
+    </label>
+    <br>
+    <button type="submit">Update Recipe</button>
+  </form>
+</section>
+
+<%- include('../partials/footer') %></br>
