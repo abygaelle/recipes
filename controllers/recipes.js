@@ -1,5 +1,6 @@
 import { Recipe } from '../models/recipe.js'
 
+
 function index(req, res) {
   Recipe.find({})
   .populate("owner")
@@ -24,10 +25,10 @@ function show(req, res) {
       title: "Recipe Details"
     })
   })
-  .catch(err => {
-    console.log(err)
-    res.redirect("/recipes")
-  })
+  // .catch(err => {
+  //   console.log(err)
+  //   res.redirect("/recipes")
+  // })
 }
 
 function create(req, res) {
@@ -56,10 +57,66 @@ function createReview(req, res) {
   })
 }
 
+function edit(req, res) {
+  Recipe.findById(req.params.id)
+  .then(recipe => {
+    res.render('recipes/edit', {
+      recipe,
+      title: "Edit Recipe"
+    })
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/recipes')
+  })
+}
+
+function update(req, res) {
+  Recipe.findById(req.params.id)
+  .then(recipe => {
+    if (recipe.owner.equals(req.user.profile._id)) {
+      recipe.updateOne(req.body, {new: true})
+      .then(()=> {
+        res.redirect(`/recipes/${recipe._id}`)
+      })
+    } 
+    else {
+      throw new Error ("Sorry not authorized")
+    }
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect(`/recipes`)
+  })
+}
+
+function deleteRecipe(req, res) {
+  Recipe.findById(req.params.id)
+  .then(recipe => {
+    if (recipe.owner.equals(req.user.profile._id)) {
+      recipe.delete()
+      .then(() => {
+        res.redirect('/recipes')
+      })
+    } 
+    else {
+      throw new Error ("Sorry can't delete someones recipe!")
+    }   
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/recipes')
+  })
+}
+
+
 export {
   index,
   create,
   show,
   newRecipe as new,
   createReview,
+  edit,
+  update,
+  deleteRecipe as delete,
 }

@@ -14,14 +14,6 @@ const recipeSchema = new Schema ({
     type: String,
     required: true,
   },
-  directions: {
-    type: String,
-    required: true,
-  },
-  ingredients: {
-    type: String,
-    required: true,
-  },
   delicious: {
     type: Boolean,
     required: true,
@@ -30,8 +22,18 @@ const recipeSchema = new Schema ({
     type: Number,
     min: 0,
   },
+  ingredients: {
+    type: String,
+    required: true,
+  },
+  directions: {
+    type: String,
+    required: true,
+  },
 
-  owner: {type: Schema.Types.ObjectId, ref: "Profile"},
+  owner: {
+    type: Schema.Types.ObjectId, 
+    ref: "Profile"},
   reviews: [reviewSchema],
 
 }, {
