@@ -1,8 +1,10 @@
 <%- include('./partials/html-head') %>
+<link rel="stylesheet" href="/stylesheets/home.css" />
 <%- include('./partials/nav') %>
 
 <main>
-  <h1>Hello, <%= user ? user.profile.name : "Food Lover" %></h1>
+  <h1 class="home-pg">Hello, <%= user ? user.profile.name : "Food Lover" %></h1>
+  <h2 class="home-pg">Welcome to recipe sharing is caring</h2>
   <% if (user?.profile.avatar) { %>
     <div>
       <img
