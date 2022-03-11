@@ -1,0 +1,6 @@
+/* .card-body{
+  border: blue solid 5px;
+} */
+.row{
+  display: flex;
+}
