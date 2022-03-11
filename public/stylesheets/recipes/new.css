@@ -1,0 +1,26 @@
+body{
+  text-align: center;
+  background-image: url('/assets/new.jpg');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-size: contain;
+  background-size: cover;
+}
+.new-title{
+  font-size: 60px;
+  color: rgb(78, 137, 248);
+  border: 10px solid rgb(79, 145, 231);
+  background-color: rgb(255, 255, 255);
+  border-radius: 15px 50px;
+  text-shadow: 2px 2px 5px black;
+}
+.new-title:hover{
+  color:rgb(49, 85, 175);
+  background-color: rgb(200, 225, 248);
+}
+
+.new-titles{
+  font-size: 30px;
+  text-shadow: 2px 2px 5px rgb(2, 1, 1);
+  color: rgb(79, 145, 231);
+}

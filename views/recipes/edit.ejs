@@ -1,31 +1,37 @@
 <%- include('../partials/html-head') %>
+<link 
+  href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" 
+  rel="stylesheet" 
+  integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" 
+  crossorigin="anonymous"
+>
 <link rel="stylesheet" href="/stylesheets/recipes/edit.css" />
 <%- include('../partials/nav') %>
 
 <section>
-  <h1>Edit Your Recipe</h1>
+  <h1 class="recipe-ed">Edit Your Recipe</h1>
   <form action="/recipes/<%= recipe._id %>?_method=PUT" method="POST">
-    <label>
+    <label class="ed-titles">
       Name: 
       <input type="text" name="name" value="<%= recipe.name %>" autocomplete="off">
     </label>
     <br>
-    <label>
+    <label class="ed-titles">
       Total Time:
-      <input type="number" name="totalTime" value="<%= recipe.totalTime %>" min="1" max="1000">
+      <input  type="number" name="totalTime" value="<%= recipe.totalTime %>" min="1" max="1000">
     </label>
     <br>
-    <label>
+    <label class="ed-titles">
       Ingredients:
-      <input type="text" name="ingredients" value="<%= recipe.ingredients %>">
+      <input  type="text" name="ingredients" value="<%= recipe.ingredients %>">
     </label>
     <br>
-    <label>
+    <label class="ed-titles">
       Directions:
-      <input type="text" name="ingredients" value="<%= recipe.directions %>">
+      <input  type="text" name="ingredients" value="<%= recipe.directions %>">
     </label>
     <br>
-    <button type="submit">Edit Recipe</button>
+    <button class="btn btn-primary" type="submit">Edit Recipe</button>
   </form>
 </section>
 

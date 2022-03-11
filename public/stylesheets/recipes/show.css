@@ -1,0 +1,62 @@
+body{
+  background-image: url('/assets/show.png');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-size: contain;
+  background-size: cover;
+}
+.recipe-nd{
+  font-size: 60px;
+  color: rgb(78, 137, 248);
+  border: 10px solid rgb(79, 145, 231);
+  background-color: rgb(255, 255, 255);
+  border-radius: 15px 50px;
+  text-shadow: 2px 2px 5px black;
+}
+.recipe-nd:hover{
+  color:rgb(49, 85, 175);
+  background-color: rgb(200, 225, 248);
+}
+
+.show-list{
+  box-shadow: 10px 10px 5px black;
+  background-color: white;
+  font-size: 17px;
+  border: 5px solid rgb(255, 255, 255);
+  inline-size: 550px;
+  overflow-wrap: break-word;
+  border-radius: 25px;
+}
+
+.recipe-own-name{
+  font-size: 30px;
+  text-shadow: 2px 2px 5px rgb(2, 1, 1);
+  color: rgb(79, 145, 231);
+}
+
+.edit-link{
+  font-size: 25px;
+  color: red;
+  background-color: white;
+  border-radius: 25px;
+  border: 5px solid rgb(255, 255, 255);
+}
+
+.review-text{
+  font-size: 25px;
+  text-shadow: 2px 2px 5px rgb(0, 0, 0);
+  color: rgb(23, 98, 195);
+}
+#rating-select{
+  font-size: 30px;
+}
+
+.review-content{
+  font-size: 20px;
+  color: rgb(23, 98, 195);
+  border: 3px solid rgb(255, 255, 255);
+  border-radius: 25px;
+  overflow-wrap: break-word;
+  background-color: white;
+  box-shadow: 10px 10px 5px black;
+}

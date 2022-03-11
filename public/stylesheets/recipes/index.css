@@ -1,6 +1,15 @@
-/* .card-body{
-  border: blue solid 5px;
-} */
-.row{
-  display: flex;
+body{
+  background-image: url('/assets/recipe.jpg');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-size: contain;
+  background-size: cover;
+}
+.title-hp{
+  font-size: 60px;
+  color: rgb(78, 137, 248);
+  border: 10px solid rgb(79, 145, 231);
+  background-color: rgb(255, 255, 255);
+  border-radius: 15px 50px;
+  text-shadow: 2px 2px 5px black;
 }
