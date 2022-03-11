@@ -8,9 +8,9 @@ I created the app recipes becuase I love to cook and thought that it would be gr
 ___
 ## Desktop View
 ___
-![view 1](https://imgur.com/LzojD5B)
+![view 1](https://imgur.com/LzojD5B.jpg)
 
-![view 2](https://imgur.com/OXce5IL)
+![view 2](https://imgur.com/OXce5IL.jpg)
 ___
 ## 🍱Technologies🍱:
 ___
