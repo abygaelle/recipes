@@ -13,3 +13,7 @@ body{
   border-radius: 15px 50px;
   text-shadow: 2px 2px 5px black;
 }
+.title-hp:hover{
+  color:rgb(49, 85, 175);
+  background-color: rgb(200, 225, 248);
+}

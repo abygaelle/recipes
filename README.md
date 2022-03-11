@@ -4,7 +4,13 @@ Share recipes with others <a href="https://share-recipes-ab.herokuapp.com/" tarf
 ___
 ## 🥘Motivation🥘:
 ___
-I created 
+I created the app recipes becuase I love to cook and thought that it would be greate to share recipes with other people. And other people could share their favorite recipes as well. Creating an recipe app online gives esay access where ever you are.
+___
+## Desktop View
+___
+![view 1](https://imgur.com/LzojD5B)
+
+![view 2](https://imgur.com/OXce5IL)
 ___
 ## 🍱Technologies🍱:
 ___
@@ -36,3 +42,4 @@ ___
 * Ability for user to add images
 * Users favorite recipe in profile
 * Users to add fun facts in profile
+* Mobile Compatibillity
